@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon app.js",
+    "build-frontend": "cd frontend && npm i && npm run build",
+    "build-backend": "npm i && node app.js",
+    "build": "npm run build-frontend && npm run build-backend",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
