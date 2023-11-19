@@ -7,7 +7,7 @@ import Splash from './components/Splash';
 import Chat from './components/Chat';
 
 function App() {
-    const [loading, setLoading] = useState(false); 
+    const [loading, setLoading] = useState(true); 
     const [tasks, setTasks] = useState(null);
     const [selectedTask, setSelectedTask] = useState(null);
 
