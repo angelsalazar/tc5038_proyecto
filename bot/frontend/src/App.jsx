@@ -9,7 +9,7 @@ import Chat from './components/Chat';
 function App() {
     const [loading, setLoading] = useState(false); 
     const [tasks, setTasks] = useState(null);
-    const [selectedTask, setSelectedTask] = useState('make_reservation');
+    const [selectedTask, setSelectedTask] = useState();
 
     useEffect(() => {
         getTasks()
