@@ -13,8 +13,10 @@
 * cd into bot directory `cd tc5038_proyecto/bot`
 * create .env file and add the following content
 
+```
 PORT=8080
 GOOGLE_GENERATIVE_AI_TOKEN=REPLACE_ME
+```
 
 * run `npm run build`
 
