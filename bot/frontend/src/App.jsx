@@ -9,7 +9,7 @@ import Chat from './components/Chat';
 function App() {
     const [loading, setLoading] = useState(false); 
     const [tasks, setTasks] = useState(null);
-    const [selectedTask, setSelectedTask] = useState(null);
+    const [selectedTask, setSelectedTask] = useState('make_reservation');
 
     useEffect(() => {
         getTasks()
@@ -36,6 +36,11 @@ function App() {
                 setSelectedTask(null);
                 setLoading(false);
             })
+    }
+
+    function handleError(error) {
+        alert(`Oops something when wrong (${error}). the app will restart`);
+        setSelectedTask(null);
     }
 
     if (!tasks) {
@@ -66,7 +71,9 @@ function App() {
                     <div className="h-full grid grid-cols-1 gap-0 sm:grid-cols-3 sm:gap-4">
                         <section className="col-span-1 sm:col-span-2">
                             {selectedTask ? (
-                                <Chat task={selectedTask} />
+                                <Chat 
+                                    onError={handleError}
+                                />
                             ) : (
                                 <Splash 
                                     options={tasks}

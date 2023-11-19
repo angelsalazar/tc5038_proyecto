@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Messages from './Messages'
 import MessageInput from './MessageInput';
 
@@ -12,7 +12,7 @@ function createMessage(content, author) {
     }
 }
 
-function Chat({ task = '' }) {
+function Chat({ onError }) {
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -35,7 +35,12 @@ function Chat({ task = '' }) {
                 ]))
                 setLoading(false);
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(error)
+                if (onError && typeof onError === 'function') {
+                    onError(error)
+                }
+            });
     }
 
     return (
