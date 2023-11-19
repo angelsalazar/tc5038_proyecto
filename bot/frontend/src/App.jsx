@@ -9,7 +9,7 @@ import Chat from './components/Chat';
 function App() {
     const [loading, setLoading] = useState(false); 
     const [tasks, setTasks] = useState(null);
-    const [selectedTask, setSelectedTask] = useState();
+    const [selectedTask, setSelectedTask] = useState(null);
 
     useEffect(() => {
         getTasks()
