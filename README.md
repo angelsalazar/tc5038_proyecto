@@ -9,14 +9,14 @@
 
 ### how to run
 
-* clone repo executing `git clone https://github.com/angelsalazar/tc5038_proyecto.git`
-* cd into `bot` (e.g `cd tc5038_proyecto/bot`)
+* clone repo `git clone https://github.com/angelsalazar/tc5038_proyecto.git`
+* cd into bot directory `cd tc5038_proyecto/bot`
 * create .env file and add the following content
 
 PORT=8080
 GOOGLE_GENERATIVE_AI_TOKEN=REPLACE_ME
 
-* run `npm run build` 
+* run `npm run build`
 
 ## mvp 
 
